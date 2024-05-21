@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Document(collation = "product")
+@Document(collection = "product")
 public class Product extends BaseModel {
 
     @Id

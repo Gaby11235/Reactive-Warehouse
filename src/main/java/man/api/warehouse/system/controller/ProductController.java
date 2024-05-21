@@ -31,6 +31,7 @@ public class ProductController {
 
     @PostMapping("")
     public Mono<ResponseEntity> add(@RequestBody ProductDto productDto) {
+        System.out.println(productDto.getName());
         return this.productRepository.insertProduct(productDto)
                 .map(saved -> ResponseEntity.created(URI.create("/product/" + saved.getId())).build());
     }

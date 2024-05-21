@@ -7,6 +7,7 @@ import man.api.warehouse.system.model.Product;
 import man.api.warehouse.system.model.dto.ProductDto;
 import man.api.warehouse.system.repository.ProductRepository;
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Flux;
@@ -46,6 +47,7 @@ public class ProductRepositoryImpl implements ProductRepository{
     public Mono<Product> insertProduct(ProductDto productDto) {
         return mongoTemplate.insert(
                 Product.builder()
+                        .id(productDto.getId().toString())
                         .name(productDto.getName())
                         .price(productDto.getPrice())
                         .stock(productDto.getStock())
