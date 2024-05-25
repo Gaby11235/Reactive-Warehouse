@@ -3,6 +3,7 @@ package man.api.warehouse.system.repository.impl;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import man.api.warehouse.system.mapper.ProductMapper;
+import man.api.warehouse.system.model.Order;
 import man.api.warehouse.system.model.Product;
 import man.api.warehouse.system.model.dto.ProductDto;
 import man.api.warehouse.system.repository.ProductRepository;
@@ -50,7 +51,6 @@ public class ProductRepositoryImpl implements ProductRepository{
                         .id(productDto.getId().toString())
                         .name(productDto.getName())
                         .price(productDto.getPrice())
-                        .stock(productDto.getStock())
                         .build()
         );
     }
@@ -59,7 +59,7 @@ public class ProductRepositoryImpl implements ProductRepository{
     public Mono<Boolean> updateProduct(String id, ProductDto productDto) {
         return mongoTemplate.update(Product.class)
                 .matching(where("id").is(id))
-                .apply(Update.update("name", productDto.getName()).set("price", productDto.getPrice()).set("stock", productDto.getStock()))
+                .apply(Update.update("name", productDto.getName()).set("price", productDto.getPrice()))
                 .all()
                 .map(updateResult -> updateResult.getModifiedCount() == 1L);
     }
@@ -74,6 +74,6 @@ public class ProductRepositoryImpl implements ProductRepository{
 
     @Override
     public Mono<Long> countByKeyword(String keyword) {
-        return mongoTemplate.count(query(where("name").regex(".*" + keyword + ".*", "i")), Product.class);
+        return mongoTemplate.count(query(where("name").regex(".*" + keyword + ".*", "i")), Order.class);
     }
 }

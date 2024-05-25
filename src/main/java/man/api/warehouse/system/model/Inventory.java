@@ -2,10 +2,9 @@ package man.api.warehouse.system.model;
 
 import lombok.*;
 import man.api.warehouse.common.utils.BaseModel;
-import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.time.LocalDateTime;
 
@@ -14,14 +13,11 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Document(collection = "product")
-public class Product extends BaseModel {
-
+@Document(collection = "inventory")
+public class Inventory extends BaseModel {
     @Id
     private String id;
-
-    private String name;
-
-    private Float price;
-
+    @Field("product_id")
+    private String productId;
+    private int quantity;
 }

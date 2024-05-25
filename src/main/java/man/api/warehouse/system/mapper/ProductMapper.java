@@ -16,7 +16,6 @@ public class ProductMapper {
         productDto.setId(productDto.getId());
         productDto.setName(product.getName());
         productDto.setPrice(product.getPrice());
-        productDto.setStock(product.getStock());
         return productDto;
     }
 
@@ -27,7 +26,6 @@ public class ProductMapper {
         Product product = new Product();
         product.setName(productDto.getName());
         product.setPrice(productDto.getPrice());
-        product.setStock(productDto.getStock());
         return product;
     }
 }

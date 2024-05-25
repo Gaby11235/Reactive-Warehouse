@@ -1,5 +1,9 @@
 package man.api.warehouse.system.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import man.api.warehouse.common.exception.ProductNotFoundException;
 import man.api.warehouse.system.model.Product;
@@ -17,11 +21,14 @@ import java.net.URI;
 @RequiredArgsConstructor
 @Validated
 @RequestMapping(value = "/product")
+@Tag(name = "产品接口", description = "产品接口 API")
 public class ProductController {
 
     private final ProductRepository productRepository;
 
     @GetMapping("")
+    @Operation(summary = "fetchAllProducts", description = "fetchAllProducts")
+    @ApiResponses(@ApiResponse(responseCode = "200", description = "接口请求成功"))
     public Mono<PaginatedResult<ProductDto>> fetchAllProducts(@RequestParam(value = "query", required = false) String query,
                                                               @RequestParam(value = "offset", defaultValue = "0") int offset,
                                                               @RequestParam(value = "limit", defaultValue = "10") int limit) {
@@ -30,6 +37,8 @@ public class ProductController {
     }
 
     @PostMapping("")
+    @Operation(summary = "addProduct", description = "addProduct")
+    @ApiResponses(@ApiResponse(responseCode = "201", description = "接口请求成功"))
     public Mono<ResponseEntity> add(@RequestBody ProductDto productDto) {
         System.out.println(productDto.getName());
         return this.productRepository.insertProduct(productDto)
@@ -37,11 +46,15 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
+    @Operation(summary = "selectProductById", description = "selectProductById")
+    @ApiResponses(@ApiResponse(responseCode = "201", description = "接口请求成功"))
     public Mono<Product> get(@PathVariable("id") String id) {
         return this.productRepository.findProductById(id).switchIfEmpty(Mono.error(new ProductNotFoundException(id)));
     }
 
     @PutMapping("/{id}")
+    @Operation(summary = "updateProduct", description = "updateProduct")
+    @ApiResponses(@ApiResponse(responseCode = "201", description = "接口请求成功"))
     public Mono<ResponseEntity> update(@PathVariable("id") String id, @RequestBody ProductDto productDto) {
         return this.productRepository.updateProduct(id, productDto)
                 .handle((result, sink) -> {
@@ -54,6 +67,8 @@ public class ProductController {
     }
 
     @DeleteMapping("/{id}")
+    @Operation(summary = "DeleteProduct", description = "DeleteProduct")
+    @ApiResponses(@ApiResponse(responseCode = "204", description = "接口请求成功"))
     public Mono<ResponseEntity> delete(@PathVariable("id") String id) {
         return this.productRepository.deleteProductById(id)
                 .handle((result, sink) -> {

@@ -35,9 +35,9 @@ public class ProductControllerTest {
 
     @Test
     public void createProduct() {
-        Product product = Product.builder().name("water").price(2.50F).stock(100L).build();
+        Product product = Product.builder().name("water").price(2.50F).build();
         given(productRepository.insertProduct(ProductMapper.toDto(product)))
-                .willReturn(Mono.just(Product.builder().id("1").name("water").price(2.50F).stock(100L).build()));
+                .willReturn(Mono.just(Product.builder().id("1").name("water").price(2.50F).build()));
         client.post().uri("/product").body(BodyInserters.fromValue(product))
                 .exchange()
                 .expectStatus().isCreated()
