@@ -1,9 +1,7 @@
 package man.api.warehouse.system.mapper;
 
 import man.api.warehouse.common.exception.ComponentException;
-import man.api.warehouse.system.model.SPRelation;
 import man.api.warehouse.system.model.Supplier;
-import man.api.warehouse.system.model.dto.SPRelationDto;
 import man.api.warehouse.system.model.dto.SupplierDto;
 import org.springframework.stereotype.Component;
 

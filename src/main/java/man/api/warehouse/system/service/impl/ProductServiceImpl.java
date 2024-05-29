@@ -1,4 +1,4 @@
-package man.api.warehouse.system.service.Impl;
+package man.api.warehouse.system.service.impl;
 
 import com.alibaba.csp.sentinel.Entry;
 import com.alibaba.csp.sentinel.SphU;

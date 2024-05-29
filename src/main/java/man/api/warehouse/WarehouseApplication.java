@@ -1,5 +1,7 @@
 package man.api.warehouse;
 
+import man.api.warehouse.system.controller.InventoryHandler;
+import man.api.warehouse.system.controller.OrderHandler;
 import man.api.warehouse.system.controller.ProductHandler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -28,6 +30,29 @@ public class WarehouseApplication {
 								.andRoute(DELETE("/{id}"), productHandler::deleteProduct)
 								.andRoute(POST("/"), productHandler::saveProduct)
 								.andRoute(PUT("/{id}"), productHandler::updateProduct)));
+	}
+
+	@Bean
+	RouterFunction<ServerResponse> inventoryRoutes(InventoryHandler inventoryHandler) {
+		return nest(path("/api/inventories"),
+				nest(accept(MediaType.APPLICATION_JSON),
+						route(method(HttpMethod.GET), inventoryHandler::listInventories)
+								.andRoute(DELETE("/{id}"), inventoryHandler::deleteInventory)
+								.andRoute(POST("/"), inventoryHandler::saveInventory)
+								.andRoute(PUT("/{id}"), inventoryHandler::updateInventory)));
+	}
+
+	@Bean
+	public RouterFunction<ServerResponse> orderRoutes(OrderHandler orderHandler) {
+		return nest(path("/api/orders"),
+				nest(accept(MediaType.APPLICATION_JSON),
+						route(method(HttpMethod.GET), orderHandler::listOrders)
+								.andRoute(GET("/{id}"), orderHandler::getOrder)
+								.andRoute(POST("/"), orderHandler::saveOrder)
+								.andRoute(PUT("/{id}"), orderHandler::updateOrder)
+								.andRoute(DELETE("/{id}"), orderHandler::deleteOrder)
+				)
+		);
 	}
 
 }

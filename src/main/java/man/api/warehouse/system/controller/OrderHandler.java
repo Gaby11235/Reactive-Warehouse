@@ -1,8 +1,9 @@
 package man.api.warehouse.system.controller;
 
 import lombok.RequiredArgsConstructor;
+import man.api.warehouse.system.model.dto.OrderDto;
 import man.api.warehouse.system.model.dto.ProductDto;
-import man.api.warehouse.system.service.impl.ProductServiceImpl;
+import man.api.warehouse.system.service.OrderService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
@@ -13,50 +14,61 @@ import reactor.core.publisher.Mono;
 
 @Component
 @RequiredArgsConstructor
-public class ProductHandler {
-    private final ProductServiceImpl productService;
+public class OrderHandler {
 
-    public Mono<ServerResponse> listProducts(ServerRequest serverRequest) {
-        Flux<ProductDto> allProducts = productService.findAllProducts();
+    private final OrderService orderService;
+
+    public Mono<ServerResponse> listOrders(ServerRequest request) {
+        Flux<OrderDto> allOrders = orderService.findAllOrders();
         Mono<ServerResponse> notFound = ServerResponse.notFound().build();
 
         return ServerResponse.ok()
                 .contentType(MediaType.APPLICATION_JSON)
-                .body(allProducts, ProductDto.class)
+                .body(allOrders, ProductDto.class)
                 .switchIfEmpty(notFound);
     }
 
-    public Mono<ServerResponse> saveProduct(ServerRequest serverRequest) {
-        Mono<ProductDto> productDtoMono = serverRequest.bodyToMono(ProductDto.class);
+    public Mono<ServerResponse> getOrder(ServerRequest request) {
+        String id = request.pathVariable("id");
+        return orderService.findOrderById(id)
+                .flatMap(order -> ServerResponse.ok()
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .bodyValue(order))
+                .switchIfEmpty(ServerResponse.notFound().build());
+    }
+
+    public Mono<ServerResponse> saveOrder(ServerRequest serverRequest) {
+        Mono<OrderDto> orderDtoMono = serverRequest.bodyToMono(OrderDto.class);
         Mono<ServerResponse> notFound = ServerResponse.notFound().build();
 
-        return productDtoMono.flatMap(productDto ->
+        return orderDtoMono.flatMap(orderDto ->
                         ServerResponse
                                 .status(HttpStatus.CREATED)
                                 .contentType(MediaType.APPLICATION_JSON)
-                                .body(productService.save(productDto), ProductDto.class))
+                                .body(orderService.save(orderDto), OrderDto.class))
                 .switchIfEmpty(notFound);
     }
 
-    public Mono<ServerResponse> updateProduct(ServerRequest serverRequest) {
+    public Mono<ServerResponse> updateOrder(ServerRequest serverRequest) {
         String id = serverRequest.pathVariable("id");
-        Mono<ProductDto> productDtoMono = serverRequest.bodyToMono(ProductDto.class);
+        Mono<OrderDto> productDtoMono = serverRequest.bodyToMono(OrderDto.class);
         Mono<ServerResponse> notFound = ServerResponse.notFound().build();
 
-        return productDtoMono.flatMap(productDto ->
+        return productDtoMono.flatMap(orderDto ->
                         ServerResponse
                                 .status(HttpStatus.OK)
                                 .contentType(MediaType.APPLICATION_JSON)
-                                .body(productService.update(productDto, id), ProductDto.class))
+                                .body(orderService.update(orderDto, id), OrderDto.class))
                 .switchIfEmpty(notFound);
     }
 
-    public Mono<ServerResponse> deleteProduct(ServerRequest serverRequest) {
+    public Mono<ServerResponse> deleteOrder(ServerRequest serverRequest) {
         String id = serverRequest.pathVariable("id");
         Mono<ServerResponse> notFound = ServerResponse.notFound().build();
         return ServerResponse
                 .status(HttpStatus.NO_CONTENT)
-                .build(productService.delete(id))
+                .build(orderService.delete(id))
                 .switchIfEmpty(notFound);
     }
+
 }
