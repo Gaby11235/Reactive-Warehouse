@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ProductMapper {
 
-    public static ProductDto toDto(Product product) {
+    public ProductDto toDto(Product product) {
         if(product == null) {
             throw new ComponentException(product.getClass().getName());
         }

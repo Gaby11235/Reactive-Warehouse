@@ -7,12 +7,10 @@ import lombok.Setter;
 @Setter
 public class ProductDto {
 
-    private Long id;
+    private String id;
 
     private String name;
 
     private Float price;
-
-    private Long stock;
 
 }
