@@ -6,7 +6,6 @@ import reactor.core.publisher.Mono;
 
 public interface OrderService {
     Flux<OrderDto> findAllOrders();
-    Mono<OrderDto> findOrderById(String id);
     Mono<OrderDto> save(OrderDto orderDto);
     Mono<OrderDto> update(OrderDto orderDto, String id);
     Mono<Void> delete(String id);

@@ -1,9 +1,8 @@
 package man.api.warehouse.system.controller;
 
 import lombok.RequiredArgsConstructor;
-import man.api.warehouse.system.model.dto.OrderDto;
-import man.api.warehouse.system.model.dto.ProductDto;
-import man.api.warehouse.system.service.OrderService;
+import man.api.warehouse.system.model.dto.UserDto;
+import man.api.warehouse.system.service.impl.UserServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
@@ -14,51 +13,50 @@ import reactor.core.publisher.Mono;
 
 @Component
 @RequiredArgsConstructor
-public class OrderHandler {
+public class UserHandler {
+    private final UserServiceImpl userService;
 
-    private final OrderService orderService;
-
-    public Mono<ServerResponse> listOrders(ServerRequest request) {
-        Flux<OrderDto> allOrders = orderService.findAllOrders();
+    public Mono<ServerResponse> listUsers(ServerRequest serverRequest) {
+        Flux<UserDto> allUsers = userService.findAllUsers();
         Mono<ServerResponse> notFound = ServerResponse.notFound().build();
 
         return ServerResponse.ok()
                 .contentType(MediaType.APPLICATION_JSON)
-                .body(allOrders, ProductDto.class)
+                .body(allUsers, UserDto.class)
                 .switchIfEmpty(notFound);
     }
 
-    public Mono<ServerResponse> saveOrder(ServerRequest serverRequest) {
-        Mono<OrderDto> orderDtoMono = serverRequest.bodyToMono(OrderDto.class);
+    public Mono<ServerResponse> saveUser(ServerRequest serverRequest) {
+        Mono<UserDto> userDtoMono = serverRequest.bodyToMono(UserDto.class);
         Mono<ServerResponse> notFound = ServerResponse.notFound().build();
 
-        return orderDtoMono.flatMap(orderDto ->
+        return userDtoMono.flatMap(userDto ->
                         ServerResponse
                                 .status(HttpStatus.CREATED)
                                 .contentType(MediaType.APPLICATION_JSON)
-                                .body(orderService.save(orderDto), OrderDto.class))
+                                .body(userService.save(userDto), UserDto.class))
                 .switchIfEmpty(notFound);
     }
 
-    public Mono<ServerResponse> updateOrder(ServerRequest serverRequest) {
+    public Mono<ServerResponse> updateUser(ServerRequest serverRequest) {
         String id = serverRequest.pathVariable("id");
-        Mono<OrderDto> productDtoMono = serverRequest.bodyToMono(OrderDto.class);
+        Mono<UserDto> userDtoMono = serverRequest.bodyToMono(UserDto.class);
         Mono<ServerResponse> notFound = ServerResponse.notFound().build();
 
-        return productDtoMono.flatMap(orderDto ->
+        return userDtoMono.flatMap(userDto ->
                         ServerResponse
                                 .status(HttpStatus.OK)
                                 .contentType(MediaType.APPLICATION_JSON)
-                                .body(orderService.update(orderDto, id), OrderDto.class))
+                                .body(userService.update(userDto, id), UserDto.class))
                 .switchIfEmpty(notFound);
     }
 
-    public Mono<ServerResponse> deleteOrder(ServerRequest serverRequest) {
+    public Mono<ServerResponse> deleteUser(ServerRequest serverRequest) {
         String id = serverRequest.pathVariable("id");
         Mono<ServerResponse> notFound = ServerResponse.notFound().build();
         return ServerResponse
                 .status(HttpStatus.NO_CONTENT)
-                .build(orderService.delete(id))
+                .build(userService.delete(id))
                 .switchIfEmpty(notFound);
     }
 

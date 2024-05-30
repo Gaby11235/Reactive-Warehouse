@@ -1,7 +1,6 @@
 package man.api.warehouse;
 
 import man.api.warehouse.system.model.dto.OrderDto;
-import man.api.warehouse.system.model.dto.ProductDto;
 import man.api.warehouse.system.service.OrderService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,28 +29,6 @@ public class OrderHandlerTests {
                 .expectHeader().contentType(MediaType.APPLICATION_JSON)
                 .expectBodyList(OrderDto.class)
                 .consumeWith(System.out::println); // Print response body for debugging
-    }
-
-    @Test
-    public void testGetOrderById() {
-        OrderDto orderDto = new OrderDto();
-        orderDto.setOrderNumber("ORD123");
-        orderDto.setUserId(123);
-        orderDto.setProductId("product-123");
-        orderDto.setQuantity(5);
-
-        OrderDto savedOrder = orderService.save(orderDto).block();
-
-        webTestClient.get().uri("/api/orders/{id}", Collections.singletonMap("id", savedOrder.getId()))
-                .accept(MediaType.APPLICATION_JSON)
-                .exchange()
-                .expectStatus().isOk()
-                .expectHeader().contentType(MediaType.APPLICATION_JSON)
-                .expectBody()
-                .jsonPath("$.orderNumber").isEqualTo(orderDto.getOrderNumber())
-                .jsonPath("$.userId").isEqualTo(orderDto.getUserId())
-                .jsonPath("$.productId").isEqualTo(orderDto.getProductId())
-                .jsonPath("$.quantity").isEqualTo(orderDto.getQuantity());
     }
 
     @Test

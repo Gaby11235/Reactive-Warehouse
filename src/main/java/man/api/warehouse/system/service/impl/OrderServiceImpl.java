@@ -71,11 +71,6 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Mono<OrderDto> findOrderById(String id) {
-        return null;
-    }
-
-    @Override
     public Mono<OrderDto> update(OrderDto orderDto, String id) {
         return orderReactiveRepository.findById(id)
                 .flatMap(existingOrder -> {

@@ -1,8 +1,6 @@
 package man.api.warehouse;
 
-import man.api.warehouse.system.controller.InventoryHandler;
-import man.api.warehouse.system.controller.OrderHandler;
-import man.api.warehouse.system.controller.ProductHandler;
+import man.api.warehouse.system.controller.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -47,12 +45,41 @@ public class WarehouseApplication {
 		return nest(path("/api/orders"),
 				nest(accept(MediaType.APPLICATION_JSON),
 						route(method(HttpMethod.GET), orderHandler::listOrders)
-								.andRoute(GET("/{id}"), orderHandler::getOrder)
 								.andRoute(POST("/"), orderHandler::saveOrder)
 								.andRoute(PUT("/{id}"), orderHandler::updateOrder)
 								.andRoute(DELETE("/{id}"), orderHandler::deleteOrder)
 				)
 		);
+	}
+
+	@Bean
+	RouterFunction<ServerResponse> spRelationRoutes(SPRelationHandler spRelationHandler) {
+		return nest(path("/api/spRelations"),
+				nest(accept(MediaType.APPLICATION_JSON),
+						route(method(HttpMethod.GET), spRelationHandler::listSPRelations)
+								.andRoute(DELETE("/{id}"), spRelationHandler::deleteSPRelation)
+								.andRoute(POST("/"), spRelationHandler::saveSPRelation)
+								.andRoute(PUT("/{id}"), spRelationHandler::updateSPRelation)));
+	}
+
+	@Bean
+	public RouterFunction<ServerResponse> supplierRoutes(SupplierHandler supplierHandler) {
+		return nest(path("/api/suppliers"),
+				nest(accept(MediaType.APPLICATION_JSON),
+						route(method(HttpMethod.GET), supplierHandler::listSuppliers)
+								.andRoute(DELETE("/{id}"), supplierHandler::deleteSupplier)
+								.andRoute(POST("/"), supplierHandler::saveSupplier)
+								.andRoute(PUT("/{id}"), supplierHandler::updateSupplier)));
+	}
+
+	@Bean
+	public RouterFunction<ServerResponse> userRoutes(UserHandler userHandler) {
+		return nest(path("/api/users"),
+				nest(accept(MediaType.APPLICATION_JSON),
+						route(method(HttpMethod.GET), userHandler::listUsers)
+								.andRoute(POST("/"), userHandler::saveUser)
+								.andRoute(PUT("/{id}"), userHandler::updateUser)
+								.andRoute(DELETE("/{id}"), userHandler::deleteUser)));
 	}
 
 }
