@@ -1,20 +1,53 @@
 package man.api.warehouse.system.controller;
 
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.security.Keys;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import man.api.warehouse.system.model.AuthResponse;
+import man.api.warehouse.system.model.dto.LoginRequest;
 import man.api.warehouse.system.model.dto.UserDto;
 import man.api.warehouse.system.service.impl.UserServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
+import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import javax.crypto.SecretKey;
+import java.util.Date;
+
 @Component
 @RequiredArgsConstructor
+@Slf4j
 public class UserHandler {
     private final UserServiceImpl userService;
+    private static final SecretKey SECRET_KEY = Keys.secretKeyFor(SignatureAlgorithm.HS512);
+
+    public Mono<ServerResponse> login(ServerRequest serverRequest) {
+        return serverRequest.bodyToMono(LoginRequest.class)
+                .flatMap(loginRequest -> userService.findByUsername(loginRequest.getUsername())
+                        .flatMap(user -> {
+                            // 添加日志记录以输出返回的用户信息
+                            log.info("User found: {}", user);
+                            if (loginRequest.getPassword().equals(user.getPassword())) {
+                                String accessToken = generateAccessToken(user.getUsername());
+                                String refreshToken = generateRefreshToken(user.getUsername());
+                                return ServerResponse.ok()
+                                        .contentType(MediaType.APPLICATION_JSON)
+                                        .body(BodyInserters.fromValue(new AuthResponse(accessToken, refreshToken)));
+                            } else {
+                                // 身份验证失败，返回401状态码
+                                return ServerResponse.status(HttpStatus.UNAUTHORIZED).build();
+                            }
+                        }).switchIfEmpty(ServerResponse.status(HttpStatus.UNAUTHORIZED).build())
+                );
+    }
+
 
     public Mono<ServerResponse> listUsers(ServerRequest serverRequest) {
         Flux<UserDto> allUsers = userService.findAllUsers();
@@ -60,4 +93,19 @@ public class UserHandler {
                 .switchIfEmpty(notFound);
     }
 
+    private String generateAccessToken(String username) {
+        return Jwts.builder()
+                .setSubject(username)
+                .setExpiration(new Date(System.currentTimeMillis() + 3600000))
+                .signWith(SECRET_KEY)
+                .compact();
+    }
+
+    private String generateRefreshToken(String username) {
+        return Jwts.builder()
+                .setSubject(username)
+                .setExpiration(new Date(System.currentTimeMillis() + 604800000))
+                .signWith(SECRET_KEY)
+                .compact();
+    }
 }

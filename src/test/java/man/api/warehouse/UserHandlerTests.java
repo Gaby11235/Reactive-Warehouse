@@ -1,5 +1,6 @@
 package man.api.warehouse;
 
+import man.api.warehouse.system.model.dto.LoginRequest;
 import man.api.warehouse.system.model.dto.UserDto;
 import man.api.warehouse.system.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
@@ -9,8 +10,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import reactor.core.publisher.Mono;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Collections;
 
@@ -34,6 +33,7 @@ public class UserHandlerTests {
 
     @Test
     public void testCreateUser() {
+
         webTestClient.post().uri("/api/users/")
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON)
@@ -83,5 +83,25 @@ public class UserHandlerTests {
                 .exchange()
                 .expectStatus().isNoContent();
     }
+
+    @Test
+    public void testLogin() {
+        LoginRequest loginRequest = new LoginRequest();
+        loginRequest.setUsername("jane_smith");
+        loginRequest.setPassword("hashedJaneSmithPassword");
+
+        webTestClient.post().uri("/api/users/login")
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)
+                .body(Mono.just(loginRequest), LoginRequest.class)
+                .exchange()
+                .expectStatus().isOk()
+                .expectBody()
+                .consumeWith(response -> {
+                    System.out.println("Response body: " + new String(response.getResponseBody()));
+                });
+    }
+
+
 
 }

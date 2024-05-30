@@ -79,7 +79,9 @@ public class WarehouseApplication {
 						route(method(HttpMethod.GET), userHandler::listUsers)
 								.andRoute(POST("/"), userHandler::saveUser)
 								.andRoute(PUT("/{id}"), userHandler::updateUser)
-								.andRoute(DELETE("/{id}"), userHandler::deleteUser)));
+								.andRoute(DELETE("/{id}"), userHandler::deleteUser)
+								.andRoute(POST("/login"), userHandler::login)));
+
 	}
 
 }

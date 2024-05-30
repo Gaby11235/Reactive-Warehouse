@@ -10,4 +10,5 @@ public interface UserService {
     Mono<UserDto> update(UserDto userDto, String id);
     Mono<Void> delete(String id);
 
+    Mono<UserDto> findByUsername(String username);
 }

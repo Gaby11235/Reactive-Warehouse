@@ -51,4 +51,10 @@ public class UserServiceImpl implements UserService {
         return userReactiveRepository.deleteById(id);
     }
 
+    @Override
+    public Mono<UserDto> findByUsername(String username) {
+        return userReactiveRepository.findByUsername(username)
+                .map(userMapper::toDto);
+    }
+
 }
