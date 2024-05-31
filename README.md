@@ -101,13 +101,13 @@ Reactive-Warehouse [warehouse]
 1. 克隆项目仓库：
 
    ```
-   git clone https://github.com/your-repo/warehouse-management-system.git
+   git clone https://github.com/Gaby11235/Reactive-Warehouse.git
    ```
 
 2. 进入项目目录并运行：
 
    ```
-   cd warehouse-management-system
+   cd Reactive-Warehouse
    ./mvnw spring-boot:run
    ```
 
