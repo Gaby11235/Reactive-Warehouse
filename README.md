@@ -72,6 +72,7 @@ Reactive-Warehouse [warehouse]
 
 使用Spring Security和JWT进行API认证。
 <img width="992" alt="截屏2024-05-31 18 14 28" src="https://github.com/Gaby11235/Reactive-Warehouse/assets/88358084/7bdd48bc-cab7-4a24-8ace-c772d62fa83b">
+<img width="489" alt="搜狗截图20240531191730" src="https://github.com/Gaby11235/Reactive-Warehouse/assets/104555481/131e5d54-f022-4310-a80d-7ade5a4d743d">
 
 ### 5.4 会话控制
 
@@ -79,7 +80,7 @@ Reactive-Warehouse [warehouse]
 
 ### 5.5 日志
 
-使用SLF4J和Logback进行日志记录
+使用SLF4J和Logback进行日志记录，具体记录的内容可在logs文件夹中查看，设置和配置内容在logback-spring.xml文件中。
 
 ### 5.6 流量限制
 
@@ -102,6 +103,7 @@ Reactive-Warehouse [warehouse]
 
    ```
    git clone https://github.com/Gaby11235/Reactive-Warehouse.git
+
    ```
 
 2. 进入项目目录并运行：
