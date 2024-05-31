@@ -48,6 +48,28 @@ public class UserHandler {
                 );
     }
 
+    public Mono<ServerResponse> refreshToken(ServerRequest serverRequest) {
+        return serverRequest.bodyToMono(AuthResponse.class)
+                .flatMap(authResponse -> {
+                    String refreshToken = authResponse.getRefreshToken();
+                    try {
+                        String username = Jwts.parserBuilder()
+                                .setSigningKey(SECRET_KEY)
+                                .build()
+                                .parseClaimsJws(refreshToken)
+                                .getBody()
+                                .getSubject();
+                        String newAccessToken = generateAccessToken(username);
+                        return ServerResponse.ok()
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .body(BodyInserters.fromValue(new AuthResponse(newAccessToken, refreshToken)));
+                    } catch (Exception e) {
+                        log.error("Invalid refresh token", e);
+                        return ServerResponse.status(HttpStatus.UNAUTHORIZED).build();
+                    }
+                });
+    }
+
 
     public Mono<ServerResponse> listUsers(ServerRequest serverRequest) {
         Flux<UserDto> allUsers = userService.findAllUsers();

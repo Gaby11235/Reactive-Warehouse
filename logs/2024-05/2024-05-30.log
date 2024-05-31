@@ -1,0 +1,444 @@
+2024-05-30 18:24:14.289  INFO 18336 --- [main] man.api.warehouse.UserHandlerTests       : Starting UserHandlerTests using Java 21.0.2 with PID 18336 (started by asus in D:\program files\IDEA\Reactive-Warehouse)
+2024-05-30 18:24:14.293  INFO 18336 --- [main] man.api.warehouse.UserHandlerTests       : No active profile set, falling back to 1 default profile: "default"
+2024-05-30 18:24:15.401  INFO 18336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2024-05-30 18:24:15.665  INFO 18336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 258 ms. Found 6 Reactive MongoDB repository interfaces.
+2024-05-30 18:24:16.783  INFO 18336 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@214b342f, socketChannelClass=null, allocator=null, sslContext=null}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@5db0003d, com.mongodb.Jep395RecordCodecProvider@7f12094d, com.mongodb.KotlinCodecProvider@589fb74d]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-05-30 18:24:16.932  INFO 18336 --- [cluster-ClusterId{value='665853d0f5d8746f76e5c610', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=84000100}
+2024-05-30 18:24:18.624  INFO 18336 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 51931
+2024-05-30 18:24:18.650  INFO 18336 --- [main] man.api.warehouse.UserHandlerTests       : Started UserHandlerTests in 4.864 seconds (process running for 6.408)
+2024-05-30 18:24:44.178  INFO 1956 --- [main] man.api.warehouse.UserHandlerTests       : Starting UserHandlerTests using Java 21.0.2 with PID 1956 (started by asus in D:\program files\IDEA\Reactive-Warehouse)
+2024-05-30 18:24:44.182  INFO 1956 --- [main] man.api.warehouse.UserHandlerTests       : No active profile set, falling back to 1 default profile: "default"
+2024-05-30 18:24:45.458  INFO 1956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2024-05-30 18:24:45.741  INFO 1956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 274 ms. Found 6 Reactive MongoDB repository interfaces.
+2024-05-30 18:24:47.429  INFO 1956 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@23564dd2, socketChannelClass=null, allocator=null, sslContext=null}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@54895681, com.mongodb.Jep395RecordCodecProvider@2dd0a0d0, com.mongodb.KotlinCodecProvider@6bf570c]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-05-30 18:24:47.605  INFO 1956 --- [cluster-ClusterId{value='665853efba93ff3d19e42ab8', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=89841300}
+2024-05-30 18:24:49.514  INFO 1956 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 51963
+2024-05-30 18:24:49.539  INFO 1956 --- [main] man.api.warehouse.UserHandlerTests       : Started UserHandlerTests in 6.028 seconds (process running for 8.443)
+2024-05-30 18:27:25.140  INFO 24500 --- [main] man.api.warehouse.UserHandlerTests       : Starting UserHandlerTests using Java 21.0.2 with PID 24500 (started by asus in D:\program files\IDEA\Reactive-Warehouse)
+2024-05-30 18:27:25.146  INFO 24500 --- [main] man.api.warehouse.UserHandlerTests       : No active profile set, falling back to 1 default profile: "default"
+2024-05-30 18:27:26.438  INFO 24500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2024-05-30 18:27:26.627  INFO 24500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 182 ms. Found 6 Reactive MongoDB repository interfaces.
+2024-05-30 18:27:27.657  INFO 24500 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@54895681, socketChannelClass=null, allocator=null, sslContext=null}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@2dd0a0d0, com.mongodb.Jep395RecordCodecProvider@6bf570c, com.mongodb.KotlinCodecProvider@1796b2d4]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-05-30 18:27:27.788  INFO 24500 --- [cluster-ClusterId{value='6658548f729c0d2e9ba0e431', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=67652700}
+2024-05-30 18:27:29.091  INFO 24500 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 52089
+2024-05-30 18:27:29.119  INFO 24500 --- [main] man.api.warehouse.UserHandlerTests       : Started UserHandlerTests in 4.482 seconds (process running for 6.012)
+2024-05-30 18:27:30.819 ERROR 24500 --- [nioEventLoopGroup-3-3] a.w.r.e.AbstractErrorWebExceptionHandler : [0aea5618-1]  500 Server Error for HTTP POST "/api/users/login"
+
+org.springframework.dao.IncorrectResultSizeDataAccessException: Query { "$java" : Query: { "username" : "testUser"}, Fields: {}, Sort: {} } returned non unique result
+	at org.springframework.data.mongodb.core.ReactiveFindOperationSupport$ReactiveFindSupport.lambda$one$2(ReactiveFindOperationSupport.java:130)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ org.springframework.security.web.server.authentication.logout.LogoutWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.authentication.AuthenticationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.authorization.AuthorizationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.authorization.ExceptionTranslationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.authentication.logout.LogoutWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.savedrequest.ServerRequestCacheWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.context.SecurityContextServerWebExchangeWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.authentication.AuthenticationWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.context.ReactorContextWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.header.HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.config.web.server.ServerHttpSecurity$ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	*__checkpoint ⇢ org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	*__checkpoint ⇢ HTTP POST "/api/users/login" [ExceptionHandlingWebHandler]
+Original Stack Trace:
+		at org.springframework.data.mongodb.core.ReactiveFindOperationSupport$ReactiveFindSupport.lambda$one$2(ReactiveFindOperationSupport.java:130)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:132)
+		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+		at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+		at org.springframework.security.test.context.support.ReactorContextTestExecutionListener$DelegateTestExecutionListener$SecuritySubContext.onComplete(ReactorContextTestExecutionListener.java:130)
+		at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.drain(FluxMergeSequential.java:374)
+		at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onComplete(FluxMergeSequential.java:259)
+		at org.springframework.security.test.context.support.ReactorContextTestExecutionListener$DelegateTestExecutionListener$SecuritySubContext.onComplete(ReactorContextTestExecutionListener.java:130)
+		at reactor.core.publisher.FluxCreate$BaseSink.complete(FluxCreate.java:465)
+		at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:871)
+		at reactor.core.publisher.FluxCreate$BufferAsyncSink.complete(FluxCreate.java:819)
+		at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:249)
+		at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215)
+		at reactor.core.publisher.FluxCreate$SerializedFluxSink.complete(FluxCreate.java:206)
+		at com.mongodb.reactivestreams.client.internal.BatchCursorFlux.lambda$recurseCursor$5(BatchCursorFlux.java:106)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:171)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854)
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.success(MonoCreate.java:176)
+		at com.mongodb.reactivestreams.client.internal.BatchCursor.lambda$next$1(BatchCursor.java:50)
+		at com.mongodb.internal.operation.AsyncQueryBatchCursor.next(AsyncQueryBatchCursor.java:178)
+		at com.mongodb.reactivestreams.client.internal.BatchCursor.lambda$next$2(BatchCursor.java:42)
+		at reactor.core.publisher.MonoCreate.subscribe(MonoCreate.java:61)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4568)
+		at reactor.core.publisher.Mono.subscribeWith(Mono.java:4634)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4395)
+		at com.mongodb.reactivestreams.client.internal.BatchCursorFlux.recurseCursor(BatchCursorFlux.java:112)
+		at com.mongodb.reactivestreams.client.internal.BatchCursorFlux.lambda$subscribe$0(BatchCursorFlux.java:61)
+		at reactor.core.publisher.LambdaMonoSubscriber.onNext(LambdaMonoSubscriber.java:171)
+		at org.springframework.security.test.context.support.ReactorContextTestExecutionListener$DelegateTestExecutionListener$SecuritySubContext.onNext(ReactorContextTestExecutionListener.java:120)
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+		at org.springframework.security.test.context.support.ReactorContextTestExecutionListener$DelegateTestExecutionListener$SecuritySubContext.onNext(ReactorContextTestExecutionListener.java:120)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:245)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:305)
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.success(MonoCreate.java:176)
+		at com.mongodb.reactivestreams.client.internal.MongoOperationPublisher.lambda$sinkToCallback$33(MongoOperationPublisher.java:525)
+		at com.mongodb.reactivestreams.client.internal.OperationExecutorImpl.lambda$execute$2(OperationExecutorImpl.java:94)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:47)
+		at com.mongodb.internal.async.function.AsyncCallbackSupplier.lambda$whenComplete$1(AsyncCallbackSupplier.java:97)
+		at com.mongodb.internal.async.function.RetryingAsyncCallbackSupplier$RetryingCallback.onResult(RetryingAsyncCallbackSupplier.java:116)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:47)
+		at com.mongodb.internal.async.function.AsyncCallbackSupplier.lambda$whenComplete$1(AsyncCallbackSupplier.java:97)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:47)
+		at com.mongodb.internal.async.function.AsyncCallbackSupplier.lambda$whenComplete$1(AsyncCallbackSupplier.java:97)
+		at com.mongodb.internal.operation.FindOperation.lambda$exceptionTransformingCallback$6(FindOperation.java:369)
+		at com.mongodb.internal.operation.AsyncOperationHelper.lambda$transformingReadCallback$19(AsyncOperationHelper.java:442)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:47)
+		at com.mongodb.internal.connection.DefaultServer$DefaultServerProtocolExecutor.lambda$executeAsync$0(DefaultServer.java:249)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:47)
+		at com.mongodb.internal.connection.CommandProtocolImpl.lambda$executeAsync$0(CommandProtocolImpl.java:88)
+		at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.lambda$sendAndReceiveAsync$1(DefaultConnectionPool.java:802)
+		at com.mongodb.internal.connection.UsageTrackingInternalConnection.lambda$sendAndReceiveAsync$1(UsageTrackingInternalConnection.java:155)
+		at com.mongodb.internal.async.ErrorHandlingResultCallback.onResult(ErrorHandlingResultCallback.java:47)
+		at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendCommandMessageAsync$0(InternalStreamConnection.java:555)
+		at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback$MessageCallback.onResult(InternalStreamConnection.java:849)
+		at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback$MessageCallback.onResult(InternalStreamConnection.java:812)
+		at com.mongodb.internal.connection.InternalStreamConnection$3.completed(InternalStreamConnection.java:671)
+		at com.mongodb.internal.connection.InternalStreamConnection$3.completed(InternalStreamConnection.java:668)
+		at com.mongodb.connection.netty.NettyStream.readAsync(NettyStream.java:332)
+		at com.mongodb.connection.netty.NettyStream.readAsync(NettyStream.java:276)
+		at com.mongodb.internal.connection.InternalStreamConnection.readAsync(InternalStreamConnection.java:668)
+		at com.mongodb.internal.connection.InternalStreamConnection.access$600(InternalStreamConnection.java:98)
+		at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback.onResult(InternalStreamConnection.java:802)
+		at com.mongodb.internal.connection.InternalStreamConnection$MessageHeaderCallback.onResult(InternalStreamConnection.java:786)
+		at com.mongodb.internal.connection.InternalStreamConnection$3.completed(InternalStreamConnection.java:671)
+		at com.mongodb.internal.connection.InternalStreamConnection$3.completed(InternalStreamConnection.java:668)
+		at com.mongodb.connection.netty.NettyStream.readAsync(NettyStream.java:332)
+		at com.mongodb.connection.netty.NettyStream.handleReadResponse(NettyStream.java:359)
+		at com.mongodb.connection.netty.NettyStream.access$1100(NettyStream.java:112)
+		at com.mongodb.connection.netty.NettyStream$InboundBufferHandler.channelRead0(NettyStream.java:435)
+		at com.mongodb.connection.netty.NettyStream$InboundBufferHandler.channelRead0(NettyStream.java:432)
+		at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2024-05-30 18:27:30.878 ERROR 24500 --- [main] o.s.t.w.reactive.server.ExchangeResult   : Request details for assertion failure:
+
+> POST http://localhost:52089/api/users/login
+> accept-encoding: [gzip]
+> user-agent: [ReactorNetty/1.1.18]
+> host: [localhost:52089]
+> WebTestClient-Request-Id: [1]
+> Content-Type: [application/json]
+> Accept: [application/json]
+> Content-Length: [45]
+
+{"username":"testUser","password":"testPass"}
+
+< 500 INTERNAL_SERVER_ERROR Internal Server Error
+< Content-Type: [application/json]
+< Content-Length: [141]
+< Cache-Control: [no-cache, no-store, max-age=0, must-revalidate]
+< Pragma: [no-cache]
+< Expires: [0]
+< X-Content-Type-Options: [nosniff]
+< X-Frame-Options: [DENY]
+< X-XSS-Protection: [0]
+< Referrer-Policy: [no-referrer]
+
+{"timestamp":"2024-05-30T10:27:30.817+00:00","path":"/api/users/login","status":500,"error":"Internal Server Error","requestId":"0aea5618-1"}
+
+2024-05-30 18:30:12.659  INFO 13688 --- [main] man.api.warehouse.UserHandlerTests       : Starting UserHandlerTests using Java 21.0.2 with PID 13688 (started by asus in D:\program files\IDEA\Reactive-Warehouse)
+2024-05-30 18:30:12.662  INFO 13688 --- [main] man.api.warehouse.UserHandlerTests       : No active profile set, falling back to 1 default profile: "default"
+2024-05-30 18:30:13.713  INFO 13688 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2024-05-30 18:30:13.920  INFO 13688 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 201 ms. Found 6 Reactive MongoDB repository interfaces.
+2024-05-30 18:30:14.977  INFO 13688 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@1510b9a2, socketChannelClass=null, allocator=null, sslContext=null}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@76a6f045, com.mongodb.Jep395RecordCodecProvider@633ddc0c, com.mongodb.KotlinCodecProvider@4bcdd11]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-05-30 18:30:15.119  INFO 13688 --- [cluster-ClusterId{value='6658553622e9e85e513360dd', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=73412500}
+2024-05-30 18:30:16.615  INFO 13688 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 52237
+2024-05-30 18:30:16.637  INFO 13688 --- [main] man.api.warehouse.UserHandlerTests       : Started UserHandlerTests in 4.402 seconds (process running for 6.008)
+2024-05-30 18:30:18.384 ERROR 13688 --- [main] o.s.t.w.reactive.server.ExchangeResult   : Request details for assertion failure:
+
+> POST http://localhost:52237/api/users/login
+> accept-encoding: [gzip]
+> user-agent: [ReactorNetty/1.1.18]
+> host: [localhost:52237]
+> WebTestClient-Request-Id: [1]
+> Content-Type: [application/json]
+> Accept: [application/json]
+> Content-Length: [45]
+
+{"username":"testUser","password":"testPass"}
+
+< 401 UNAUTHORIZED Unauthorized
+< Cache-Control: [no-cache, no-store, max-age=0, must-revalidate]
+< Pragma: [no-cache]
+< Expires: [0]
+< X-Content-Type-Options: [nosniff]
+< X-Frame-Options: [DENY]
+< X-XSS-Protection: [0]
+< Referrer-Policy: [no-referrer]
+< content-length: [0]
+
+0 bytes of content (unknown content-type).
+
+2024-05-30 18:33:33.445  INFO 24220 --- [main] man.api.warehouse.UserHandlerTests       : Starting UserHandlerTests using Java 21.0.2 with PID 24220 (started by asus in D:\program files\IDEA\Reactive-Warehouse)
+2024-05-30 18:33:33.449  INFO 24220 --- [main] man.api.warehouse.UserHandlerTests       : No active profile set, falling back to 1 default profile: "default"
+2024-05-30 18:33:34.745  INFO 24220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2024-05-30 18:33:35.008  INFO 24220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 255 ms. Found 6 Reactive MongoDB repository interfaces.
+2024-05-30 18:33:36.182  INFO 24220 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@935d3f9, socketChannelClass=null, allocator=null, sslContext=null}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@214b342f, com.mongodb.Jep395RecordCodecProvider@5db0003d, com.mongodb.KotlinCodecProvider@7f12094d]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-05-30 18:33:36.342  INFO 24220 --- [cluster-ClusterId{value='66585600d932a3552b7d7bed', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=82219500}
+2024-05-30 18:33:38.166  INFO 24220 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 52432
+2024-05-30 18:33:38.193  INFO 24220 --- [main] man.api.warehouse.UserHandlerTests       : Started UserHandlerTests in 5.348 seconds (process running for 7.155)
+2024-05-30 18:33:40.065 ERROR 24220 --- [main] o.s.t.w.reactive.server.ExchangeResult   : Request details for assertion failure:
+
+> POST http://localhost:52432/api/users/login
+> accept-encoding: [gzip]
+> user-agent: [ReactorNetty/1.1.18]
+> host: [localhost:52432]
+> WebTestClient-Request-Id: [1]
+> Content-Type: [application/json]
+> Accept: [application/json]
+> Content-Length: [45]
+
+{"username":"testUser","password":"testPass"}
+
+< 401 UNAUTHORIZED Unauthorized
+< Cache-Control: [no-cache, no-store, max-age=0, must-revalidate]
+< Pragma: [no-cache]
+< Expires: [0]
+< X-Content-Type-Options: [nosniff]
+< X-Frame-Options: [DENY]
+< X-XSS-Protection: [0]
+< Referrer-Policy: [no-referrer]
+< content-length: [0]
+
+0 bytes of content (unknown content-type).
+
+2024-05-30 18:36:47.947  INFO 22072 --- [main] man.api.warehouse.UserHandlerTests       : Starting UserHandlerTests using Java 21.0.2 with PID 22072 (started by asus in D:\program files\IDEA\Reactive-Warehouse)
+2024-05-30 18:36:47.951  INFO 22072 --- [main] man.api.warehouse.UserHandlerTests       : No active profile set, falling back to 1 default profile: "default"
+2024-05-30 18:36:49.319  INFO 22072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2024-05-30 18:36:49.582  INFO 22072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 254 ms. Found 6 Reactive MongoDB repository interfaces.
+2024-05-30 18:36:50.806  INFO 22072 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@12567179, socketChannelClass=null, allocator=null, sslContext=null}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@37d699a1, com.mongodb.Jep395RecordCodecProvider@7f42b194, com.mongodb.KotlinCodecProvider@8eb6f9a]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-05-30 18:36:50.952  INFO 22072 --- [cluster-ClusterId{value='665856c2364b6d01c7ddb5d8', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=75104800}
+2024-05-30 18:36:52.635  INFO 22072 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 52616
+2024-05-30 18:36:52.656  INFO 22072 --- [main] man.api.warehouse.UserHandlerTests       : Started UserHandlerTests in 5.367 seconds (process running for 7.113)
+2024-05-30 18:36:54.455 ERROR 22072 --- [main] o.s.t.w.reactive.server.ExchangeResult   : Request details for assertion failure:
+
+> POST http://localhost:52616/api/users/login
+> accept-encoding: [gzip]
+> user-agent: [ReactorNetty/1.1.18]
+> host: [localhost:52616]
+> WebTestClient-Request-Id: [1]
+> Content-Type: [application/json]
+> Accept: [application/json]
+> Content-Length: [45]
+
+{"username":"testUser","password":"testPass"}
+
+< 401 UNAUTHORIZED Unauthorized
+< Cache-Control: [no-cache, no-store, max-age=0, must-revalidate]
+< Pragma: [no-cache]
+< Expires: [0]
+< X-Content-Type-Options: [nosniff]
+< X-Frame-Options: [DENY]
+< X-XSS-Protection: [0]
+< Referrer-Policy: [no-referrer]
+< content-length: [0]
+
+0 bytes of content (unknown content-type).
+
+2024-05-30 18:41:29.489  INFO 18304 --- [main] man.api.warehouse.UserHandlerTests       : Starting UserHandlerTests using Java 21.0.2 with PID 18304 (started by asus in D:\program files\IDEA\Reactive-Warehouse)
+2024-05-30 18:41:29.492  INFO 18304 --- [main] man.api.warehouse.UserHandlerTests       : No active profile set, falling back to 1 default profile: "default"
+2024-05-30 18:41:30.502  INFO 18304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2024-05-30 18:41:30.699  INFO 18304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 190 ms. Found 6 Reactive MongoDB repository interfaces.
+2024-05-30 18:41:31.637  INFO 18304 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@29170a47, socketChannelClass=null, allocator=null, sslContext=null}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@2a8f8555, com.mongodb.Jep395RecordCodecProvider@402b4f81, com.mongodb.KotlinCodecProvider@13ef7fa1]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-05-30 18:41:31.756  INFO 18304 --- [cluster-ClusterId{value='665857dbbc3c6c5776de5081', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=61925300}
+2024-05-30 18:41:33.389  INFO 18304 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 52807
+2024-05-30 18:41:33.412  INFO 18304 --- [main] man.api.warehouse.UserHandlerTests       : Started UserHandlerTests in 4.388 seconds (process running for 5.946)
+2024-05-30 18:41:35.357  INFO 18304 --- [nioEventLoopGroup-3-3] m.a.w.system.controller.UserHandler      : User found: man.api.warehouse.system.model.dto.UserDto@398cc461
+2024-05-30 18:41:35.470 ERROR 18304 --- [main] o.s.t.w.reactive.server.ExchangeResult   : Request details for assertion failure:
+
+> POST http://localhost:52807/api/users/login
+> accept-encoding: [gzip]
+> user-agent: [ReactorNetty/1.1.18]
+> host: [localhost:52807]
+> WebTestClient-Request-Id: [1]
+> Content-Type: [application/json]
+> Accept: [application/json]
+> Content-Length: [45]
+
+{"username":"testUser","password":"testPass"}
+
+< 200 OK OK
+< Content-Type: [application/json]
+< Content-Length: [346]
+< Cache-Control: [no-cache, no-store, max-age=0, must-revalidate]
+< Pragma: [no-cache]
+< Expires: [0]
+< X-Content-Type-Options: [nosniff]
+< X-Frame-Options: [DENY]
+< X-XSS-Protection: [0]
+< Referrer-Policy: [no-referrer]
+
+{"accessToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0VXNlciIsImV4cCI6MTcxNzA2OTI5NX0.zO0Jj3NMjkW6K7PG6VHJaAZlVg1rCrPfcnBXg9bVAdrKJmdpanuZ8S0UX0PhbfF4F_TpKltCPe1r0oDX13_uLQ","refreshToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0VXNlciIsImV4cCI6MTcxNzY3MDQ5NX0.5VySioJa0aqk_Je-5IYWkyWCK-gS7E_fupU4PFtn6Wz7jdLbk65wWJpvRndsjvjB1xO9JriL3QKUVWraY1LP9Q"}
+
+2024-05-30 18:42:35.272  INFO 21200 --- [main] man.api.warehouse.UserHandlerTests       : Starting UserHandlerTests using Java 21.0.2 with PID 21200 (started by asus in D:\program files\IDEA\Reactive-Warehouse)
+2024-05-30 18:42:35.276  INFO 21200 --- [main] man.api.warehouse.UserHandlerTests       : No active profile set, falling back to 1 default profile: "default"
+2024-05-30 18:42:36.510  INFO 21200 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2024-05-30 18:42:36.784  INFO 21200 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 265 ms. Found 6 Reactive MongoDB repository interfaces.
+2024-05-30 18:42:38.013  INFO 21200 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@482ba4b1, socketChannelClass=null, allocator=null, sslContext=null}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@307af381, com.mongodb.Jep395RecordCodecProvider@1510b9a2, com.mongodb.KotlinCodecProvider@76a6f045]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-05-30 18:42:38.170  INFO 21200 --- [cluster-ClusterId{value='6658581d68c81b6adca0346c', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=88062700}
+2024-05-30 18:42:39.866  INFO 21200 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 52863
+2024-05-30 18:42:39.887  INFO 21200 --- [main] man.api.warehouse.UserHandlerTests       : Started UserHandlerTests in 5.208 seconds (process running for 7.02)
+2024-05-30 18:42:41.589  INFO 21200 --- [nioEventLoopGroup-3-3] m.a.w.system.controller.UserHandler      : User found: man.api.warehouse.system.model.dto.UserDto@59695540
+2024-05-30 18:42:41.665 ERROR 21200 --- [main] o.s.t.w.reactive.server.ExchangeResult   : Request details for assertion failure:
+
+> POST http://localhost:52863/api/users/login
+> accept-encoding: [gzip]
+> user-agent: [ReactorNetty/1.1.18]
+> host: [localhost:52863]
+> WebTestClient-Request-Id: [1]
+> Content-Type: [application/json]
+> Accept: [application/json]
+> Content-Length: [45]
+
+{"username":"testUser","password":"testPass"}
+
+< 200 OK OK
+< Content-Type: [application/json]
+< Content-Length: [346]
+< Cache-Control: [no-cache, no-store, max-age=0, must-revalidate]
+< Pragma: [no-cache]
+< Expires: [0]
+< X-Content-Type-Options: [nosniff]
+< X-Frame-Options: [DENY]
+< X-XSS-Protection: [0]
+< Referrer-Policy: [no-referrer]
+
+{"accessToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0VXNlciIsImV4cCI6MTcxNzA2OTM2MX0.47UfqH6IpRKYy3KmzwtcnqwKQ5U62IyY33dB4znDf5NCntnlEwxEAOm5GjJp0pcSYfW1e2rAwQzg1RrIK8lLhQ","refreshToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0VXNlciIsImV4cCI6MTcxNzY3MDU2MX0.HJp0S6kaCQMh5XknHGPg670xW-fNoTs2zvdN23KAIhAzHcT1ADMxjQM1J6aVPNmRvz4HRZnCJrtenK3iyHqxoA"}
+
+2024-05-30 18:43:54.638  INFO 7028 --- [main] man.api.warehouse.UserHandlerTests       : Starting UserHandlerTests using Java 21.0.2 with PID 7028 (started by asus in D:\program files\IDEA\Reactive-Warehouse)
+2024-05-30 18:43:54.648  INFO 7028 --- [main] man.api.warehouse.UserHandlerTests       : No active profile set, falling back to 1 default profile: "default"
+2024-05-30 18:43:55.832  INFO 7028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2024-05-30 18:43:56.085  INFO 7028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 248 ms. Found 6 Reactive MongoDB repository interfaces.
+2024-05-30 18:43:57.419  INFO 7028 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@935d3f9, socketChannelClass=null, allocator=null, sslContext=null}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@214b342f, com.mongodb.Jep395RecordCodecProvider@5db0003d, com.mongodb.KotlinCodecProvider@7f12094d]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-05-30 18:43:57.582  INFO 7028 --- [cluster-ClusterId{value='6658586db887dd551749e7db', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=85596700}
+2024-05-30 18:43:59.838  INFO 7028 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 52937
+2024-05-30 18:43:59.873  INFO 7028 --- [main] man.api.warehouse.UserHandlerTests       : Started UserHandlerTests in 5.812 seconds (process running for 7.595)
+2024-05-30 18:44:02.218  INFO 7028 --- [nioEventLoopGroup-3-3] m.a.w.system.controller.UserHandler      : User found: man.api.warehouse.system.model.dto.UserDto@416b35a9
+2024-05-30 18:45:44.222  INFO 17552 --- [main] man.api.warehouse.UserHandlerTests       : Starting UserHandlerTests using Java 21.0.2 with PID 17552 (started by asus in D:\program files\IDEA\Reactive-Warehouse)
+2024-05-30 18:45:44.225  INFO 17552 --- [main] man.api.warehouse.UserHandlerTests       : No active profile set, falling back to 1 default profile: "default"
+2024-05-30 18:45:45.502  INFO 17552 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2024-05-30 18:45:45.694  INFO 17552 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 188 ms. Found 6 Reactive MongoDB repository interfaces.
+2024-05-30 18:45:46.772  INFO 17552 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@5db0003d, socketChannelClass=null, allocator=null, sslContext=null}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@7f12094d, com.mongodb.Jep395RecordCodecProvider@589fb74d, com.mongodb.KotlinCodecProvider@200d1a3d]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-05-30 18:45:46.924  INFO 17552 --- [cluster-ClusterId{value='665858da03057a5fd2e7dd56', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=80739400}
+2024-05-30 18:45:49.050  INFO 17552 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 53001
+2024-05-30 18:45:49.081  INFO 17552 --- [main] man.api.warehouse.UserHandlerTests       : Started UserHandlerTests in 5.499 seconds (process running for 7.459)
+2024-05-30 18:45:50.755 ERROR 17552 --- [main] o.s.t.w.reactive.server.ExchangeResult   : Request details for assertion failure:
+
+> POST http://localhost:53001/api/users/login
+> accept-encoding: [gzip]
+> user-agent: [ReactorNetty/1.1.18]
+> host: [localhost:53001]
+> WebTestClient-Request-Id: [1]
+> Content-Type: [application/json]
+> Accept: [application/json]
+> Content-Length: [45]
+
+{"username":"testUser","password":"testPass"}
+
+< 401 UNAUTHORIZED Unauthorized
+< Cache-Control: [no-cache, no-store, max-age=0, must-revalidate]
+< Pragma: [no-cache]
+< Expires: [0]
+< X-Content-Type-Options: [nosniff]
+< X-Frame-Options: [DENY]
+< X-XSS-Protection: [0]
+< Referrer-Policy: [no-referrer]
+< content-length: [0]
+
+0 bytes of content (unknown content-type).
+
+2024-05-30 18:46:07.918  INFO 23304 --- [main] man.api.warehouse.UserHandlerTests       : Starting UserHandlerTests using Java 21.0.2 with PID 23304 (started by asus in D:\program files\IDEA\Reactive-Warehouse)
+2024-05-30 18:46:07.921  INFO 23304 --- [main] man.api.warehouse.UserHandlerTests       : No active profile set, falling back to 1 default profile: "default"
+2024-05-30 18:46:08.964  INFO 23304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2024-05-30 18:46:09.181  INFO 23304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 211 ms. Found 6 Reactive MongoDB repository interfaces.
+2024-05-30 18:46:10.227  INFO 23304 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@2dd0a0d0, socketChannelClass=null, allocator=null, sslContext=null}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@6bf570c, com.mongodb.Jep395RecordCodecProvider@1796b2d4, com.mongodb.KotlinCodecProvider@935d3f9]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-05-30 18:46:10.366  INFO 23304 --- [cluster-ClusterId{value='665858f20f2f367fbf34263e', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=78670000}
+2024-05-30 18:46:11.839  INFO 23304 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 53019
+2024-05-30 18:46:11.864  INFO 23304 --- [main] man.api.warehouse.UserHandlerTests       : Started UserHandlerTests in 4.499 seconds (process running for 6.052)
+2024-05-30 18:46:13.502  INFO 23304 --- [nioEventLoopGroup-3-3] m.a.w.system.controller.UserHandler      : User found: man.api.warehouse.system.model.dto.UserDto@5d6baff1
+2024-05-30 18:47:19.233  INFO 18964 --- [main] man.api.warehouse.UserHandlerTests       : Starting UserHandlerTests using Java 21.0.2 with PID 18964 (started by asus in D:\program files\IDEA\Reactive-Warehouse)
+2024-05-30 18:47:19.235  INFO 18964 --- [main] man.api.warehouse.UserHandlerTests       : No active profile set, falling back to 1 default profile: "default"
+2024-05-30 18:47:20.250  INFO 18964 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2024-05-30 18:47:20.450  INFO 18964 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 194 ms. Found 6 Reactive MongoDB repository interfaces.
+2024-05-30 18:47:21.365  INFO 18964 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@37d699a1, socketChannelClass=null, allocator=null, sslContext=null}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@7f42b194, com.mongodb.Jep395RecordCodecProvider@8eb6f9a, com.mongodb.KotlinCodecProvider@29170a47]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-05-30 18:47:21.478  INFO 18964 --- [cluster-ClusterId{value='665859396bc1a62291f27758', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=60759400}
+2024-05-30 18:47:22.892  INFO 18964 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 53074
+2024-05-30 18:47:22.923  INFO 18964 --- [main] man.api.warehouse.UserHandlerTests       : Started UserHandlerTests in 4.08 seconds (process running for 5.483)
+2024-05-30 18:47:25.030 ERROR 18964 --- [main] o.s.t.w.reactive.server.ExchangeResult   : Request details for assertion failure:
+
+> POST http://localhost:53074/api/users/login
+> accept-encoding: [gzip]
+> user-agent: [ReactorNetty/1.1.18]
+> host: [localhost:53074]
+> WebTestClient-Request-Id: [1]
+> Content-Type: [application/json]
+> Accept: [application/json]
+> Content-Length: [45]
+
+{"username":"testUser","password":"testPass"}
+
+< 401 UNAUTHORIZED Unauthorized
+< Cache-Control: [no-cache, no-store, max-age=0, must-revalidate]
+< Pragma: [no-cache]
+< Expires: [0]
+< X-Content-Type-Options: [nosniff]
+< X-Frame-Options: [DENY]
+< X-XSS-Protection: [0]
+< Referrer-Policy: [no-referrer]
+< content-length: [0]
+
+0 bytes of content (unknown content-type).
+
+2024-05-30 18:48:12.590  INFO 21096 --- [main] man.api.warehouse.UserHandlerTests       : Starting UserHandlerTests using Java 21.0.2 with PID 21096 (started by asus in D:\program files\IDEA\Reactive-Warehouse)
+2024-05-30 18:48:12.593  INFO 21096 --- [main] man.api.warehouse.UserHandlerTests       : No active profile set, falling back to 1 default profile: "default"
+2024-05-30 18:48:13.560  INFO 21096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2024-05-30 18:48:13.758  INFO 21096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 191 ms. Found 6 Reactive MongoDB repository interfaces.
+2024-05-30 18:48:14.794  INFO 21096 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@402b4f81, socketChannelClass=null, allocator=null, sslContext=null}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@13ef7fa1, com.mongodb.Jep395RecordCodecProvider@23b1aa9, com.mongodb.KotlinCodecProvider@54489296]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-05-30 18:48:14.923  INFO 21096 --- [cluster-ClusterId{value='6658596e6d5dc153ae4a3e20', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=71531600}
+2024-05-30 18:48:16.417  INFO 21096 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 53106
+2024-05-30 18:48:16.439  INFO 21096 --- [main] man.api.warehouse.UserHandlerTests       : Started UserHandlerTests in 4.247 seconds (process running for 5.586)
+2024-05-30 18:48:18.124  INFO 21096 --- [nioEventLoopGroup-3-3] m.a.w.system.controller.UserHandler      : User found: man.api.warehouse.system.model.dto.UserDto@37cf247f
+2024-05-30 18:48:31.581  INFO 21132 --- [main] man.api.warehouse.UserHandlerTests       : Starting UserHandlerTests using Java 21.0.2 with PID 21132 (started by asus in D:\program files\IDEA\Reactive-Warehouse)
+2024-05-30 18:48:31.583  INFO 21132 --- [main] man.api.warehouse.UserHandlerTests       : No active profile set, falling back to 1 default profile: "default"
+2024-05-30 18:48:32.761  INFO 21132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2024-05-30 18:48:32.969  INFO 21132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 202 ms. Found 6 Reactive MongoDB repository interfaces.
+2024-05-30 18:48:34.008  INFO 21132 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@7f12094d, socketChannelClass=null, allocator=null, sslContext=null}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@589fb74d, com.mongodb.Jep395RecordCodecProvider@200d1a3d, com.mongodb.KotlinCodecProvider@7de147e9]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-05-30 18:48:34.156  INFO 21132 --- [cluster-ClusterId{value='6658598148bde3274b8f484b', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=78689700}
+2024-05-30 18:48:35.847  INFO 21132 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 53114
+2024-05-30 18:48:35.877  INFO 21132 --- [main] man.api.warehouse.UserHandlerTests       : Started UserHandlerTests in 4.81 seconds (process running for 6.254)
+2024-05-30 18:48:37.484  INFO 21132 --- [nioEventLoopGroup-3-3] m.a.w.system.controller.UserHandler      : User found: man.api.warehouse.system.model.dto.UserDto@2c82510e
+2024-05-30 21:32:31.894  INFO 11736 --- [main] man.api.warehouse.WarehouseApplication   : Starting WarehouseApplication using Java 21.0.2 with PID 11736 (D:\program files\IDEA\Reactive-Warehouse\target\classes started by asus in D:\program files\IDEA\Reactive-Warehouse)
+2024-05-30 21:32:31.898  INFO 11736 --- [main] man.api.warehouse.WarehouseApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-05-30 21:32:33.962  INFO 11736 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2024-05-30 21:32:34.370  INFO 11736 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 398 ms. Found 6 Reactive MongoDB repository interfaces.
+2024-05-30 21:32:35.721  INFO 11736 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@44d7e24, socketChannelClass=null, allocator=null, sslContext=null}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@26c8b296, com.mongodb.Jep395RecordCodecProvider@1d289d3f, com.mongodb.KotlinCodecProvider@10f405ff]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-05-30 21:32:35.916  INFO 11736 --- [cluster-ClusterId{value='66587ff380cafc397cefb767', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=99755700}
+2024-05-30 21:32:37.955  INFO 11736 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8877
+2024-05-30 21:32:37.967  INFO 11736 --- [main] man.api.warehouse.WarehouseApplication   : Started WarehouseApplication in 7.19 seconds (process running for 8.666)
+2024-05-30 21:33:42.941  INFO 11736 --- [parallel-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 207 ms

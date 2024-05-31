@@ -80,7 +80,8 @@ public class WarehouseApplication {
 								.andRoute(POST("/"), userHandler::saveUser)
 								.andRoute(PUT("/{id}"), userHandler::updateUser)
 								.andRoute(DELETE("/{id}"), userHandler::deleteUser)
-								.andRoute(POST("/login"), userHandler::login)));
+								.andRoute(POST("/login"), userHandler::login)
+								.andRoute(POST("/refreshToken"), userHandler::refreshToken)));
 
 	}
 

@@ -12,6 +12,7 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 import reactor.core.publisher.Mono;
 
 import java.util.Collections;
+import java.util.Map;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class UserHandlerTests {
@@ -102,6 +103,34 @@ public class UserHandlerTests {
                 });
     }
 
+    @Test
+    public void testRefreshToken() {
+        LoginRequest loginRequest = new LoginRequest();
+        loginRequest.setUsername("jane_smith");
+        loginRequest.setPassword("hashedJaneSmithPassword");
+
+        String refreshToken = webTestClient.post().uri("/api/users/login")
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)
+                .body(Mono.just(loginRequest), LoginRequest.class)
+                .exchange()
+                .expectStatus().isOk()
+                .returnResult(Map.class)
+                .getResponseBody()
+                .blockFirst()
+                .get("refreshToken")
+                .toString();
+
+        // Use refresh token to get new access token
+        webTestClient.post().uri("/api/users/refreshToken")
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)
+                .body(Mono.just(Collections.singletonMap("refreshToken", refreshToken)), Map.class)
+                .exchange()
+                .expectStatus().isOk()
+                .expectBody()
+                .jsonPath("$.accessToken").isNotEmpty();
+    }
 
 
 }
