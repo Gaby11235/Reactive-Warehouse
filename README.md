@@ -114,4 +114,8 @@ Reactive-Warehouse [warehouse]
    ```
 
 ### 6.2 测试项目
+1. 项目对于每张表的测试结果已存储在TestScreenCapture文件中。
+2. 测试覆盖率如下图：
+   <img width="563" alt="搜狗截图20240531192354" src="https://github.com/Gaby11235/Reactive-Warehouse/assets/104555481/bb67e202-e5bc-4dc8-a4b8-8528f27abc3e">
+
 
