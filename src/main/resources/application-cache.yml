@@ -1,0 +1,12 @@
+spring:
+  cache:
+    type: redis # 仍然可以指定 Redis 作为缓存类型
+  data:
+    redis:
+      port: 6379
+      lettuce:
+        pool: # 连接池配置
+          max-wait: 2000ms
+          min-idle: 2
+          max-idle: 8
+          max-active: 10
